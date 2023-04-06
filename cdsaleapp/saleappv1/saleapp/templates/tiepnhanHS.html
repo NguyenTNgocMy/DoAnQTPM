@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="text-center text-body">HỒ SƠ HỌC SINH</h1>
+{% if msg %}
+<div class="alert alert-danger">
+  {{ msg }}
+</div>
+{% endif %}
+
+<form action="/tiepnhanHS" method="post" enctype="multipart/form-data">
+    <div class="row">
+        <div class="col">
+            <label for="hoten" class="form-label">Họ tên:</label>
+            <input type="text" class="form-control" placeholder="Nhập họ và tên học sinh" name="hoten">
+        </div>
+        <div class="col">
+            <input type="password" class="form-control" placeholder="Enter password" name="pswd">
+        </div>
+    </div>
+</form>
+
+
+
+
+<!--<table class="table">-->
+<!--    <tr>-->
+<!--        <th>Mã học sinh</th>-->
+<!--        <th>Họ tên</th>-->
+<!--        <th>Giới tính</th>-->
+<!--        <th>Ngày sinh</th>-->
+<!--        <th>Email</th>-->
+<!--        <th>Số điện thoại</th>-->
+<!--        <th>Địa chỉ</th>-->
+<!--    </tr>-->
+<!--    {% for hs in hocsinh %}-->
+<!--    <tr>-->
+<!--        <td>{{ hs.id }}</td>-->
+<!--        <td>{{ hs.hoten }}</td>-->
+<!--        <td>{{ hs.sex }}</td>-->
+<!--        <td>{{ hs.ngaysinh }}</td>-->
+<!--        <td>{{ hs.email }}</td>-->
+<!--        <td>{{ hs.SDT }}</td>-->
+<!--        <td>{{ hs.diachi }}</td>-->
+<!--        <td>-->
+<!--              <a href="javascript:;" onclick="create({{ hs.id }},'{{ hs.hoten }}')" class="btn btn-danger">Lưu</a>-->
+<!--        </td>-->
+<!--    </tr>-->
+<!--    {% endfor %}-->
+<!--    <button type="submit" class="btn btn-danger" href="/base">Thoát</button>-->
+<!--</table>-->
+
+{% endblock %}
